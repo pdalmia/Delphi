@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="panel panel-default page-container">
+        <div class="header clearfix">
+            <img src="assets/images/header-blank.jpg" alt="" class="header-image">
+        </div>
+        <div class="panel-body">
+            <div class="text-center">
+                <h1>{{ThankyouCtrl.Heading}}</h1>
+                <h2>{{ThankyouCtrl.SubHeading}}</h2>
+                <br />
+                <!--<h3>{{ThankyouCtrl.ThankyouText}}</h3>-->
+                <br />
+                <h4 data-ng-show="ThankyouCtrl.showThanksText == false" ng-bind-html="ThankyouCtrl.ThankyouNote"></h4>
+                <h4 data-ng-show="ThankyouCtrl.showThanksText == true" ng-bind-html="ThankyouCtrl.ThankyouText"></h4>
+                <br />
+                <button type="button" class="btn btn-primary btn-lg" data-ng-click="ThankyouCtrl.submit()" data-ng-show="ThankyouCtrl.showSubmitButton == true">{{ThankyouCtrl.TextSave}}</button>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+            </div>    
+        </div>
+    </div>
+</div>

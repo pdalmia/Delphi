@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="panel panel-default page-container" data-ng-show="WelcomeCtrl.isDataLoad == true">
+        <div class="header clearfix">
+            <img src="assets/images/header-blank.jpg" alt="" class="header-image">
+        </div>
+        <div class="panel-body">
+
+            <div class="text-center">
+                <h1>{{WelcomeCtrl.Heading}}</h1>
+                <h2>{{WelcomeCtrl.SubHeading}}</h2>
+            </div>
+            <br>
+            <p ng-bind-html="WelcomeCtrl.WelcomeParagraph"></p>
+            <p class="text-center"><a class="start-icon cursor" data-ng-click="WelcomeCtrl.surveyStart()"><i class="glyphicon glyphicon-play"></i></a></p>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/ng-template" id="userDialogTemplateId">
+    <div>   
+        <div class="ngdialog-message">
+            <h3>Hi {{user.UserName}}!!</h3>
+            <p>{{user.ConfirmationText}}</p>
+            <br>
+        </div>
+        <div class="ngdialog-buttons">
+            <button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="confirm(confirmValue)">Ok</button>
+            <button type="button" class="ngdialog-button ngdialog-button-secondary" ng-click="closeThisDialog('button')">{{user.TextCancel}}</button>
+        </div>
+    </div>
+</script>
+
+

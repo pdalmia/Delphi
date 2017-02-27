@@ -1,0 +1,125 @@
+body {
+  padding: 20px 0 0;
+}
+
+.header-image {
+  width: 100%;
+  height: 100px;
+}
+
+.progress-wrapper {
+  margin-top: 15px;
+}
+
+.progress-wrapper .progress-status {
+  float: right;
+  width: 250px;
+  margin-bottom: 5px;
+}
+
+.progress-wrapper .progress {
+  clear: both;
+  float: right;
+  width: 250px;
+  background: #ddd;
+  margin-bottom: 0;
+}
+
+.survey-step .answer {
+  padding: 10px 0;
+}
+
+.survey-step .radio-group {
+  padding: 10px 0;
+}
+
+.survey-step .radio-group .radio-inline {
+  height: 20px;
+  margin-left: 9px;
+}
+
+.survey-step .radio-group .radio-inline:first-child {
+  margin-left: 0;
+}
+
+.survey-slider-grid {
+  margin-bottom: 20px;
+}
+
+.survey-step .slider-wrapper {
+  margin: 10px 0;
+}
+
+.survey-step .rating-chooser {
+  margin: 10px 0 5px;
+}
+
+.survey-step .rating-chooser .pagination {
+  margin: 0;
+}
+
+.survey-step-buttons {
+  padding-top: 20px;
+}
+
+.start-icon {
+  display: inline-block;
+  background: #337ab7;
+  padding: 10px 10px 10px 15px;
+  border-radius: 100px;
+  height: 70px;
+  width: 70px;
+  margin-top: 50px;
+  font-size: 39px;
+  color: #fff;
+}
+
+.footer {
+  margin-top: 100px;
+  padding: 20px 0;
+  background-color: #222;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .progress-wrapper {
+    float: right;
+  }
+  .survey-step .answer {
+    padding: 20px 30px;
+  }
+  .survey-step .radio-group {
+    padding: 0;
+  }
+  .survey-slider-grid {
+    margin-top: 0;
+  }
+  .survey-slider-grid .column {
+    float: left;
+  }
+  .survey-slider-grid .left-col,
+  .survey-slider-grid .right-col {
+    width: 120px;
+  }
+  .survey-slider-grid .center-col {
+    width: 315px;
+  }
+  .survey-step .slider-wrapper {
+    margin: 0 0 18px;
+  }
+  .survey-step .rating-chooser {
+    margin: 0 0 10px;
+  }
+  .survey-step .rating-chooser .pagination {
+    margin: -4px 0 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .survey-step .left-column {
+    border-right: 1px solid #bbb;
+  }
+  .survey-step .right-column {
+    margin-top: 0;
+  }
+}

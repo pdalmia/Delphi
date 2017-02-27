@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="panel panel-default page-container">
+        <div class="header clearfix">
+            <img src="assets/images/header-blank.jpg" alt="" class="header-image">
+        </div>
+        <div class="panel-body">
+            <h1 class="text-center">{{QuestionCtrl.heading}}</h1>
+            <div class="progress-wrapper clearfix">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{QuestionCtrl.progress}}" aria-valuemin="0" aria-valuemax="100" data-ng-style="{'width': QuestionCtrl.updateProgress()}">
+                    </div>
+                </div>
+                <p class="progress-status"><b>Page {{QuestionCtrl.surveyQuestionId}} {{QuestionCtrl.textOf}} {{QuestionCtrl.totalQuestions}}</b></p>
+            </div>
+            <h2>{{QuestionCtrl.title}}</h2>
+            <h3>{{QuestionCtrl.questionGroupText}}</h3>
+            <!--<p>{{QuestionCtrl.subTitle}}</p>-->
+            <div class="survey-step">
+                <p class="question">{{(QuestionCtrl.surveyQuestionId) +'. '+ QuestionCtrl.questionText}}</p>
+                <div class="answer">
+                    <div class="survey-slider-grid clearfix" data-ng-show="QuestionCtrl.surveyPropositionId == 2">
+                        <div class="column left-col" style="text-align:right; padding-right:8px;">{{QuestionCtrl.propOneLeftText}}</div>
+                        <div class="column center-col radio-group">
+                            <label class="radio-inline" data-ng-repeat="option in QuestionCtrl.ratingOptions">
+                                <input type="radio" name="radioOptions" data-value="{{option}}" ng-model="QuestionCtrl.propOneRating" ng-disabled="true">
+                                {{option}}
+                            </label>
+                        </div>
+                        <div class="column right-col">{{QuestionCtrl.propOneRightText}}</div>
+                    </div>
+
+                    <div class="survey-slider-grid clearfix">
+                        <div class="column left-col" style="text-align:right; padding-right:8px;">{{QuestionCtrl.leftText}}</div>
+                        <div class="column center-col radio-group">
+                            <label class="radio-inline" data-ng-repeat="option in QuestionCtrl.ratingOptions">
+                                <input type="radio" name="inlineRadioOptions" data-ng-click="QuestionCtrl.selectRating(option)" data-value="{{option}}" ng-model="QuestionCtrl.currentRating" ng-disabled="QuestionCtrl.isRadioDisabled">
+                                {{option}}
+                            </label>
+                        </div>
+                        <div class="column right-col">{{QuestionCtrl.rightText}}</div>
+                    </div>
+                    <div data-ng-show="QuestionCtrl.isCommentRequired()">
+                        <p>{{QuestionCtrl.commentText}}</p>
+                        <textarea class="form-control answer-reason" rows="3" placeholder="{{QuestionCtrl.textYourComment}}" data-ng-model="QuestionCtrl.comment" data-ng-if="QuestionCtrl.isCommentRequired()" ng-required="true" ng-minlength="1"></textarea>
+                    </div>
+                    <div class="survey-step-buttons">
+                        <button type="button" class="btn btn-primary" ng-disabled="QuestionCtrl.isSaveEnabled == false" data-ng-click="QuestionCtrl.save()">{{QuestionCtrl.textSave}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

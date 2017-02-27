@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="panel panel-default page-container">
+        <div class="header clearfix">
+            <img src="assets/images/header-blank.jpg" alt="" class="header-image">
+        </div>
+        <div class="panel-body">
+            <h1 class="text-center">{{QuestionsListCtrl.Heading}}</h1>
+            <h2>{{QuestionsListCtrl.TextFiveStatements}}</h2>
+            <p>{{QuestionsListCtrl.ImportantQuestionsNote}}</p>
+            <br>
+            <div class="questions-list">
+                <table class="table table-bordered table-striped">
+                    <!--<thead>
+                        <tr>
+                            <th class="text-center" width="60">S. Ne</th>
+                            <th>klausimas</th>
+                            <th width="60" class="text-center">pasirinkti</th>
+                        </tr>
+                    </thead>-->
+                    <tbody>
+                        <tr data-ng-repeat="question in QuestionsListCtrl.questions">
+                            <td class="text-center" width="60">{{$index + 1 }}</td>
+                            <td>{{question.questionText}}</td>
+                            <td class="text-center" width="60">
+                                <input type="checkbox" style="cursor:pointer;width:200px;" tooltips tooltip-template="Galite pasirinkti tik 5 klausimus ."  tooltip-hidden="{{question.hiddenTooltip}}"  data-ng-model="question.isSelected" data-ng-click="QuestionsListCtrl.isMaxCountReach(question.questionId,$event)">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="survey-step-buttons">
+                <button type="button" class="btn btn-primary" data-ng-click="QuestionsListCtrl.submit()">{{QuestionsListCtrl.TextSave}}</button>
+            </div>
+        </div>
+    </div>
+</div>
+

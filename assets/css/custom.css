@@ -1,0 +1,173 @@
+body {
+  background: #e9e9e9;
+}
+
+.header {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.header-image {
+  width: 100%;
+  height: 60px;
+}
+
+.page-container {
+  clear: both;
+  margin: 15px 0 0;
+  padding: 5px;
+}
+
+.page-container h1 {
+  margin-top: 0;
+  padding-bottom: 10px;
+}
+
+.page-container h2 {
+  margin-bottom: 20px;
+}
+
+.page-container h3 {
+  margin-bottom: 10px;
+}
+
+
+.page-container h4 {
+  margin-bottom: 30px;
+}
+
+.progress-wrapper {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.progress-wrapper .progress-status {
+  margin-bottom: 5px;
+}
+
+.progress-wrapper .progress {
+  background: #ddd;
+  margin-bottom: 0;
+}
+
+.survey-step {
+    margin-top: 28px;
+}
+
+.survey-step .answer {
+  padding: 10px 0 0;
+}
+
+.survey-step .radio-group {
+  padding: 10px 0 0;
+  overflow: hidden;
+}
+
+.survey-step .radio-group .radio-inline {
+  float: left;
+  height: 20px;
+  margin: 0 10px 10px 0;
+}
+
+.survey-slider-grid {
+  margin-bottom: 20px;
+}
+
+.survey-step .slider-wrapper {
+  margin: 10px 0;
+}
+
+.survey-step .rating-chooser {
+  margin: 10px 0 5px;
+}
+
+.survey-step .rating-chooser .pagination {
+  margin: 0;
+}
+
+.survey-step-buttons {
+  padding-top: 20px;
+}
+
+.questions-list .table {
+  margin-bottom: 0;
+}
+
+.start-icon {
+  display: inline-block;
+  background: #337ab7;
+  padding: 10px 10px 10px 15px;
+  border-radius: 100px;
+  height: 70px;
+  width: 70px;
+  margin-top: 50px;
+  font-size: 39px;
+  color: #fff;
+}
+
+.footer {
+  margin-top: 100px;
+  padding: 20px 0;
+  background-color: #222;
+  color: #fff;
+}
+
+.error {
+  border-color: #a94442;
+}
+
+@media (min-width: 768px) {
+  .progress-wrapper {
+    float: right;
+    margin-top: 17px;
+  }
+  .progress-wrapper .progress-status {
+    clear: left;
+    text-align: right;
+    font-size:medium;
+    padding-top: 5px;
+  }
+  .progress-wrapper .progress {
+    float: left;
+    width: 250px;
+  }
+  .survey-step .answer {
+    padding: 10px 20px 20px 20px;
+  }
+  .survey-step .answer-reason {
+    max-width: 500px;
+  }
+  .survey-slider-grid {
+    margin-top: 0;
+  }
+  .survey-step .slider-wrapper {
+    margin: 0 0 18px;
+  }
+  .survey-step .rating-chooser {
+    margin: 0 0 10px;
+  }
+  .survey-step .rating-chooser .pagination {
+    margin: -4px 0 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .survey-step .radio-group {
+    padding: 0;
+  }
+  .survey-slider-grid .column {
+    float: left;
+  }
+  .survey-slider-grid .center-col {
+    margin: 0 25px;
+  }
+  .survey-slider-grid .left-col {
+    width: 250px;
+  }
+  .survey-step .left-column {
+    border-right: 1px solid #bbb;
+  }
+  .survey-step .right-column {
+    margin-top: 0;
+  }
+}
